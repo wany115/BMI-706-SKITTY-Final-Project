@@ -5,14 +5,15 @@ import streamlit as st
 from epiweeks import Week
 from datetime import datetime
 
-st.set_page_config(page_title="Socioeconomic Factors & COVID19")
-st.title("Socioeconomic Factors & COVID19")
+st.set_page_config(page_title="COVID-19 Time Series Data & Socioeconomic Factors")
+
+# Section 1: COVID-19 Data Analysis
+st.title("COVID-19 Data Overview in 2020")
 st.write(
     """
-    This app visualizes COVID data from Johns Hopkins University and Socioeconomic data 
-    from World Bank Health Nutrition and Population Statistics. 
-    It shows how the socioeconomic factors interact with COVID rates for each country. 
-    Just click on the widgets below to explore!
+    This section focuses on COVID-19 data from Johns Hopkins University. 
+    It provides insights into worldwide COVID-19 weekly cases across 2020, 
+    including trends and comparisons between countries.
     """
 )
 
@@ -139,9 +140,11 @@ else:
     )
 chart_line
 
-# Show the page title and description.
-st.set_page_config(page_title="Socioeconomic Factors & COVID19")
-st.title("Socioeconomic Factors & COVID19")
+# Spacer
+st.markdown("---")
+
+# Section 2: Socioeconomic Factors & COVID-19
+st.header("Socioeconomic Factors & COVID-19 Interaction")
 st.write(
     """
     This app visualizes COVID data from Johns Hopkins University and Socioeconomic data 
