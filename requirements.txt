@@ -3,4 +3,4 @@ altair
 pandas
 numpy
 epiweeks
-vega datasets
+vegadatasets
