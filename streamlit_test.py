@@ -20,6 +20,7 @@ st.write(
 url="https://raw.githubusercontent.com/wany115/BMI-706-SKITTY-Final-Project/refs/heads/main/Cleaned%20Data/Weekly%20Data.csv"
 df1 = pd.read_csv(url)
 df1['country-code'] = df1['country-code'].astype(str).str.zfill(3)
+df1['country-code'] = df1['country-code'].astype(int)
 df1 = df1.iloc[:,:-7]
 df1['Confirmed_per_100k'] = (df1['Confirmed'] / df1['Population']) * 100000
 df1['Deaths_per_100k'] = (df1['Deaths'] / df1['Population']) * 100000
