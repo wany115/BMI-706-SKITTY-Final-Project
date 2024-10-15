@@ -6,17 +6,17 @@ from epiweeks import Week
 from datetime import datetime
 
 st.set_page_config(page_title="COVID-19 Time Series Data & Socioeconomic Factors")
-
-# Section 1: COVID-19 Data Analysis
-st.title("COVID-19 Data Overview in 2020")
+st.title("Global COVID-19 Data & Socioeconomic Factors in 2020")
 st.write(
     """
-    This section focuses on COVID-19 data from Johns Hopkins University. 
-    It provides insights into worldwide COVID-19 weekly cases across 2020, 
-    including trends and comparisons between countries.
+    Our visualization aims at informing non-experts of trends of COVID-19 pandemic development in 2020. 
+    We work on country-level data across 2020 and explore temporal/geographical trends in below. 
+    To allow for more nuanced insights, we also incorporate socioeconomic factors with annual COVID-19 data counts. 
+    Enjoy your visit, and stay safe!
     """
 )
 
+# Section 1: COVID-19 Data Analysis
 url="https://raw.githubusercontent.com/wany115/BMI-706-SKITTY-Final-Project/refs/heads/main/Cleaned%20Data/Weekly%20Data.csv"
 df1 = pd.read_csv(url)
 df1['country-code'] = df1['country-code'].astype(str).str.zfill(3)
@@ -73,7 +73,14 @@ background = alt.Chart(source
     height=height
 ).project(project)
 
-st.write("## Worldwide COVID-19 Weekly Cases in 2020")
+st.header("Part 1: Worldwide COVID-19 Weekly Cases in 2020")
+st.write(
+    """
+    This section focuses on COVID-19 data from Johns Hopkins University. 
+    It provides insights into worldwide COVID-19 weekly cases across 2020, 
+    including trends and comparisons between countries.
+    """
+)
 
 def get_mmwr_week(date):
     return Week.fromdate(date).week
@@ -142,9 +149,7 @@ chart_line
 
 # Spacer
 st.markdown("---")
-
-# Section 2: Socioeconomic Factors & COVID-19
-st.header("Socioeconomic Factors & COVID-19 Interaction")
+st.header("Part 2: Socioeconomic Factors & COVID-19 Interaction")
 st.write(
     """
     This app visualizes COVID data from Johns Hopkins University and Socioeconomic data 
