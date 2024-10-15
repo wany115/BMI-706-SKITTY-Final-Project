@@ -18,5 +18,5 @@ The folder contains four major codes we used:
 Allow us to depart directly from clean data!
 
 ## Link to our app
-https://bmi-706-skitty-final-project-submission.streamlit.app/
+https://bmi-706-skitty-final-project.streamlit.app/
 
