@@ -3,4 +3,4 @@ altair
 pandas
 numpy
 epiweeks
-vegadatasets
+git+https://github.com/altair-viz/vega_datasets.git
